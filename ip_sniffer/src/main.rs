@@ -1,5 +1,6 @@
 use std::env;
 use std::net::IpAddr;
+use std::str::FromStr;
 
 struct Arguments {
     flag: String,
@@ -9,7 +10,7 @@ struct Arguments {
 
 impl Arguments {
     fn new(args: &[String]) => Result<Arguments, &'static str> {
-        if args.len() < 3 {
+        if args.len() < 2 {
             return Err("Not enough arguments");
         } else if args.len() > 4 {
             return Err("Too many arguments");
