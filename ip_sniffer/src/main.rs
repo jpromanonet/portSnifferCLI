@@ -2,5 +2,5 @@ use std::env;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
-    println!("{:?}", args);
+    let program = args[0].clone();
 }
